@@ -8,6 +8,10 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    - Security Group with Port `8080` open for internet
 1. Java v1.8.x 
 
+### By default the java version installed in EC2 instance is 1.7 use below command to remove the java version
+   ```sh
+   yum remove java-1.7*
+   ```
 ## Install Java
 1. We will be using open java for our demo, Get the latest version from http://openjdk.java.net/install/
    ```sh
@@ -65,16 +69,16 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 - Change admin password
    - `Admin` > `Configure` > `Password`
 - Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`  
+  - `Manage Jenkins` > `Global Tool Configuration` > `JDK` > `Add JDK` > `Add JAVA_HOME variable and use JAVA_HOME path configured earlier in linux server`  
 - Create another admin user id
 
 ### Test Jenkins Jobs
 1. Create “new item”
-1. Enter an item name – `My-First-Project`
+2. Enter an item name – `My-First-Project`
    - Chose `Freestyle` project
-1. Under the Build section
+3. Under the Build section
 	Execute shell: echo "Welcome to Jenkins Demo"
-1. Save your job 
-1. Build job
-1. Check "console output"
+4. Save your job 
+5. Build job
+6. Check "console output"
 
