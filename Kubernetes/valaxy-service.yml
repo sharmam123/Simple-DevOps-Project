@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: valaxy-service
   labels:
-    app: valaxy-devops-project
+    app: valaxy-devops-project  ## This should match the label present in deployment file under metadata section metadata  
 spec:
   selector:
-    app: valaxy-devops-project
+    app: valaxy-devops-project  ## This should match the label present in deployment file under metadata section template/metadata   
   type: LoadBalancer
   ports:
     - port: 8080
